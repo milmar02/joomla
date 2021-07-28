@@ -15,6 +15,7 @@ RUN chmod -R 755 /var/www/html/joomla
 
 COPY joomla.conf /etc/apache2/sites-available/joomla.conf
 COPY entrypoint.sh /entrypoint.sh
+COPY ports.conf /etc/apache2/ports.conf
 
 RUN chgrp -R 0 /var/www/html/joomla/ && \
     chmod -R g+rwX /var/www/html/joomla/
