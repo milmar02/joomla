@@ -1,9 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt -y install software-properties-common
-RUN add-apt-repository ppa:ondrej/php
 RUN apt-get update
-RUN apt install -y apache2 unzip libapache2-mod-php7.4 openssl php-imagick php7.4-common php7.4-curl php7.4-gd php7.4-imap php7.4-intl php7.4-json php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-pgsql php-ssh2 php7.4-sqlite3 php7.4-xml php7.4-zip
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:ondrej/php
+RUN apt-get install -y apache2 unzip libapache2-mod-php7.4 openssl php-imagick php7.4-common php7.4-curl php7.4-gd php7.4-imap php7.4-intl php7.4-json php7.4-ldap php7.4-mbstring php7.4-mysql php7.4-pgsql php-ssh2 php7.4-sqlite3 php7.4-xml php7.4-zip
 
 RUN wget https://downloads.joomla.org/cms/joomla3/3-9-26/Joomla_3-9-26-Stable-Full_Package.zip
 
