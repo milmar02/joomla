@@ -25,7 +25,8 @@ RUN chgrp -R 0 /entrypoint.sh && \
 	chmod -R g+rwX /entrypoint.sh
 RUN chgrp -R 0 /var/log/ && \
 	chmod -R g+rwX /var/log/
-
+	
+RUN a2enmod lbmethod_byrequests
 
 EXPOSE 8080
 CMD apachectl -D FOREGROUND
