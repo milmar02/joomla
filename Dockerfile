@@ -22,6 +22,8 @@ RUN chgrp -R 0 /etc/apache2/ && \
 	chmod -R g+rwX /etc/apache2/
 RUN chgrp -R 0 /entrypoint.sh && \
 	chmod -R g+rwX /entrypoint.sh
+RUN chgrp -R 0 /var/log/ && \
+	chmod -R g+rwX /var/log/
 
 
 EXPOSE 80
