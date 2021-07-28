@@ -27,6 +27,6 @@ RUN chgrp -R 0 /var/log/ && \
 	chmod -R g+rwX /var/log/
 
 
-EXPOSE 80
+EXPOSE 8080
 CMD apachectl -D FOREGROUND
 
